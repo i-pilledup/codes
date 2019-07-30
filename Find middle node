@@ -1,0 +1,20 @@
+|| FIND MIDDLE NODE OF LINKLIST ||
+
+
+ head -> 1 -> 2 -> 3 -> 4 -> 5 -> NULL
+
+void find_middle(node* head)
+{
+	node* p; // slow pointer
+	node* q; // fast pointer 
+
+	q = p = head; 
+
+	while (q != NULL && q->next != NULL)
+	{
+		p = p -> next;
+		q = q -> next -> next;
+	}
+	cout << p -> data;
+	// return p;
+}
