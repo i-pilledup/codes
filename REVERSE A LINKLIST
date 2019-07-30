@@ -1,0 +1,28 @@
+|| REVERSE A LINKLIST ||
+
+
+ head -> 1 -> 2 -> 3 -> 4 -> 5 -> NULL
+
+ head -> 5 -> 4 -> 3 -> 2 -> 1 -> NULL
+
+
+ void reverse()
+ {
+ 	node* curr;
+ 	node* next;
+ 	node* prev;
+
+ 	curr = head;
+ 	next = NULL;
+ 	prev = NULL;
+
+ 	while( curr != NULL)
+ 	{
+ 		next = curr -> next;
+ 		curr -> next = prev;
+
+ 		prev = curr;
+ 		curr = next;
+ 	}
+ 	head = prev;
+ }
