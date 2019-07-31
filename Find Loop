@@ -1,0 +1,12 @@
+
+void node* linklist (node* head)
+{
+	node* p;
+	p = head;
+
+	while (p != NULL && p -> next != NULL)
+	{
+		cout << p -> data;
+		p = p->next;
+	}
+}
